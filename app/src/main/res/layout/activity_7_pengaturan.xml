@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="15dp"
+    android:layout_height="match_parent"
+    tools:context=".Pengaturan">
+
+    <TextView
+        android:id="@+id/judulPengaturan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pengaturan"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/judulGantiPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Ganti Password"
+        style="text-decoration: underline;"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulPengaturan" />
+
+    <EditText
+        android:id="@+id/formPasswordSaatIni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Masukan Password Lama"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/judulPasswordSaatIni"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/judulPasswordBaru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Password Baru"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formPasswordSaatIni" />
+
+    <EditText
+        android:id="@+id/formPasswordBaru"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Masukan Password Baru"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/judulPasswordBaru"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btnSimpanPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#3D9341"
+        android:text="SIMPAN"
+        app:layout_constraintTop_toBottomOf="@+id/formPasswordBaru"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btnKembalis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#D39327"
+        android:text="KEMBALI "
+        app:layout_constraintTop_toBottomOf="@+id/btnSimpanPass"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:text="LOGOUT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#AC2525"
+        app:layout_constraintTop_toBottomOf="@+id/btnKembalis"/>
+
+
+    <TextView
+        android:id="@+id/judulPasswordSaatIni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Password Saat Ini"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulGantiPassword" />
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/aku"
+        />
+
+    <TextView
+        android:id="@+id/tanggalDibuat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Tanggal: 16 September 2022"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/foto" />
+
+    <TextView
+        android:id="@+id/nim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tanggalDibuat"
+        app:layout_constraintLeft_toRightOf="@+id/foto"
+        android:text="NIM : 1841720084"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:id="@+id/nama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/nim"
+        app:layout_constraintLeft_toRightOf="@+id/foto"
+        android:text="Nama : Qorinda Yulvarisma"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/dibuatOleh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Aplikasi ini dibuat oleh :"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/nama"
+        app:layout_constraintLeft_toRightOf="@+id/foto" />
+
+    <TextView
+        android:id="@+id/aboutThisApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="About this App.."
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dibuatOleh"
+        app:layout_constraintLeft_toRightOf="@+id/foto" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

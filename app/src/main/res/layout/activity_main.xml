@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/judulRangkuman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rangkuman Bulan Ini"
+            android:textColor="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/pengeluaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengeluaran : "
+            android:textColor="#BD1717"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/judulRangkuman" />
+        <TextView
+            android:id="@+id/pemasukan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pemasukan : "
+            android:textColor="#4CAF50"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pengeluaran" />
+
+        <ImageView
+            android:id="@+id/grafik"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toBottomOf="@+id/pemasukan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/grafik"
+            />
+
+        <ImageView
+            android:id="@+id/imagePemasukan"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/pemasukan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/imagePengeluaran"
+            app:layout_constraintTop_toBottomOf="@+id/grafik"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/judulImagePemasukan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imagePemasukan"
+            android:text="Tambah Pemasukan"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintRight_toLeftOf="@+id/imagePengeluaran"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/judulImagePengeluaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imagePemasukan"
+            app:layout_constraintTop_toBottomOf="@id/imagePengeluaran"
+            android:text="Tambah Pengeluaran"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/imagePengeluaran"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/pengeluaran"
+            app:layout_constraintLeft_toRightOf="@+id/imagePemasukan"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grafik"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageView
+            android:id="@+id/imagePengaturan"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/pengaturan"
+            app:layout_constraintTop_toBottomOf="@id/judulImagePengeluaran"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/imageDetail"
+            android:layout_marginTop="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageDetail"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/detail"
+            app:layout_constraintTop_toBottomOf="@id/judulImagePemasukan"
+            app:layout_constraintRight_toLeftOf="@id/imagePengaturan"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/judulImageDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Cash Flow"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/imagePengaturan"
+            app:layout_constraintTop_toBottomOf="@id/imageDetail" />
+
+        <TextView
+            android:id="@+id/judulImagePengaturan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imageDetail"
+            app:layout_constraintTop_toBottomOf="@id/imagePengaturan"
+            android:text="Pengaturan"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
